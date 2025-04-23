@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(220, 210, 210);
+}
+.circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: rgb(220, 210, 210);
+    border: solid 40px white;
+}
+.circle > div{
+    width: 180px;
+    height: 180px;
+    transform: rotate(45deg);
+    animation: rotate 3s ease-in-out infinite;
+}
+@keyframes rotate{ 
+    0%{
+        transform: rotate(45deg);
+    }
+    100%{
+        transform: rotate(405deg);
+    }
+}
+.circle > div::after{
+    content: "";
+    width: 28px;
+    height: 28px;
+    background-color: rgb(68, 112, 231);
+    position: absolute;
+    border-radius: 50%;
+
+}
